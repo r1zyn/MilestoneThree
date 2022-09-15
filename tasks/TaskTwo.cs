@@ -9,7 +9,7 @@ namespace TaskTwo
             Console.Write("Enter your first and last name with a space in between: ");
             string name = Console.ReadLine()!;
 
-            Regex regex = new Regex(@"/[A-Za-z]{2,}\s[A-Za-z]{2,}/g", RegexOptions.Compiled | RegexOptions.IgnoreCase); // Regular expression works in website regex testers, not working in code
+            Regex regex = new Regex(@"^[A-Za-z]{2,}\s[A-Za-z]{2,}$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
             while (!regex.IsMatch(name))
             {
