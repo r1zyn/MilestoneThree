@@ -13,7 +13,7 @@ Source code for tasks in [tasks](tasks) directory.
 Your loop should repeat until the user’s input meets all criteria. Provide suitable message(s) to the user indicating whether or not they have been successful in meeting requirements.
 
 ## [Arrays - 20 marks](tasks/TaskThree.cs)
-3. Populate an array with 50 random integers between 64 and 91, exclusive.
+3. Populate an array with 50 random integers between 64 and 91, exclusive.<br/>
 (a) Convert each number stored in the array into its corresponding ASCII letter and store these letters in a second array.</br>
 (b) Search the letters array and output the first index value which contains the letter, 'A'.</br>
 (c) Repeat task (b) but search for a letter input by the user.</br>
