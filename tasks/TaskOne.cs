@@ -14,7 +14,7 @@ namespace TaskOne
             {
                 if ((i % 7) == 0)
                 {
-                    Console.Write(i);
+                    Console.Write(i + " ");
                 }
             }
         }
