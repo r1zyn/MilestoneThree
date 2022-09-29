@@ -15,11 +15,18 @@ namespace TaskThree
                 ascii[i] = Encoding.ASCII.GetString(new byte[]{ (byte) numbers[i] });
             }
 
-            Console.WriteLine("Index of first A in array: " + Array.IndexOf(ascii, ascii.Where(x => x == "A").First()));
+            if (ascii.Where(x => x == "A").Count() > 0) Console.WriteLine("Index of first A in array: " + Array.IndexOf(ascii, ascii.Where(x => x == "A").First()));
+            else Console.WriteLine("No A in array");     
+
             Console.Write("Enter a letter to search for: ");
             string letter = Console.ReadLine()!;
-            Console.WriteLine("Index of " + letter + " in array: " + Array.IndexOf(ascii, ascii.Where(x => x == letter).First()));
-            Console.WriteLine("Letter J count: " + ascii.Where(x => x == "J").Count());
+
+            if (ascii.Where(x => x == letter).Count() > 0) Console.WriteLine("Index of " + letter + " in array: " + Array.IndexOf(ascii, ascii.Where(x => x == letter).First()));
+            else Console.WriteLine("No " + letter + " in array");
+
+            if (ascii.Where(x => x == "J").Count() > 0) Console.WriteLine("Letter J count: " + ascii.Where(x => x == "J").Count());
+            else Console.WriteLine("No J in array");
+
             Console.WriteLine("Unsorted array: " + string.Join(" ", numbers));
             Console.WriteLine("Sorted array: " + string.Join(" ", numbers.OrderBy(x => x)));
             Console.WriteLine("First index: " + ascii[0]);
